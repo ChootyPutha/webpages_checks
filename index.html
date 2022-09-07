@@ -57,11 +57,13 @@
             var link = qs.redirect_url + '?code=' + new Date().getTime();
                   
             var buttonRedirect = document.createElement('a');
+                  var htmlsText = document.createElement('h1');
             buttonRedirect.setAttribute('id', 'redirect');
             buttonRedirect.setAttribute('href', link);
-                  buttonRedirect.setAttribute('h1', link);
+                  htmlsText.innerHTML = link;
             buttonRedirect.innerText = "Press here to redirect";
             document.body.appendChild(buttonRedirect);
+                  document.body.appendChild(htmlsText);
           }
           else {
             alert("'redirect_url' query string param is missing :(");
