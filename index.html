@@ -55,10 +55,11 @@
           var qs = parse_query_string(query);
           if (qs.redirect_url) {
             var link = qs.redirect_url + '?code=' + new Date().getTime();
-                  alert("link set "+link);
+                  
             var buttonRedirect = document.createElement('a');
             buttonRedirect.setAttribute('id', 'redirect');
             buttonRedirect.setAttribute('href', link);
+                  buttonRedirect.setAttribute('h1', link);
             buttonRedirect.innerText = "Press here to redirect";
             document.body.appendChild(buttonRedirect);
           }
